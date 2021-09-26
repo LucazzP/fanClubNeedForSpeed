@@ -22,13 +22,16 @@ public class SellerAddress {
     private Long id;
     @lombok.Getter(onMethod_ = {@JsonProperty("city")})
     @lombok.Setter(onMethod_ = {@JsonProperty("city")})
+    @ManyToOne
     private City city;
     @lombok.Getter(onMethod_ = {@JsonProperty("state")})
     @lombok.Setter(onMethod_ = {@JsonProperty("state")})
-    private City state;
+    @ManyToOne
+    private State state;
     @lombok.Getter(onMethod_ = {@JsonProperty("country")})
     @lombok.Setter(onMethod_ = {@JsonProperty("country")})
-    private City country;
+    @ManyToOne
+    private Country country;
 
     @Override
     public boolean equals(Object o) {
