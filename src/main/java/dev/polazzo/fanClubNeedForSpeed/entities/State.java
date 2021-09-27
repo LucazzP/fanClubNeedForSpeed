@@ -7,10 +7,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -28,5 +25,6 @@ public class State {
     @Getter
     @Setter
     @JsonProperty("name")
+    @Column(unique = true, nullable = false)
     private String name;
 }

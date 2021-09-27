@@ -32,6 +32,7 @@ public class Product {
     @lombok.Getter
     @lombok.Setter
     @JsonProperty("title")
+    @Column(unique = true, nullable = false)
     private String title;
     @lombok.Getter
     @lombok.Setter
@@ -48,6 +49,7 @@ public class Product {
     @lombok.Getter
     @lombok.Setter
     @JsonProperty("price")
+    @Column(nullable = false)
     private Integer price;
     @lombok.Getter
     @lombok.Setter
@@ -64,10 +66,12 @@ public class Product {
     @lombok.Getter
     @lombok.Setter
     @JsonProperty("initial_quantity")
+    @Column(nullable = false)
     private Long initialQuantity;
     @lombok.Getter
     @lombok.Setter
     @JsonProperty("available_quantity")
+    @Column(nullable = false)
     private Long availableQuantity;
     @lombok.Getter
     @lombok.Setter
