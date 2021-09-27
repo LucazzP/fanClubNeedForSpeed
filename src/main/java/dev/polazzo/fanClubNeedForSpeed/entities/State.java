@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,8 @@ public class State {
     @Getter(onMethod_ = {@JsonProperty("id")})
     @Setter(onMethod_ = {@JsonProperty("id")})
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator= "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     @Getter(onMethod_ = {@JsonProperty("name")})
     @Setter(onMethod_ = {@JsonProperty("name")})

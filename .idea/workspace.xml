@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7e2d4e4-27a2-4009-b2d9-29a7d035a8cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fan_club_need_for_speed.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fan_club_need_for_speed.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Attribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Country.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/SellerAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/SellerAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -100,7 +105,7 @@
       <workItem from="1632439440135" duration="4167000" />
       <workItem from="1632444094209" duration="5386000" />
       <workItem from="1632696544549" duration="514000" />
-      <workItem from="1632697089319" duration="1114000" />
+      <workItem from="1632697089319" duration="4040000" />
     </task>
     <servers />
   </component>

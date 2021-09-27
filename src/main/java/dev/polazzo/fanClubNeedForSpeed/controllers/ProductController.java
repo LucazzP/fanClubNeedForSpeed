@@ -49,7 +49,7 @@ public class ProductController {
         productOnRepo.setAvailableQuantity(product.getAvailableQuantity());
         productOnRepo.setStartTime(product.getStartTime());
         productOnRepo.setStopTime(product.getStopTime());
-        productOnRepo.setCondition(product.getCondition());
+        productOnRepo.setConditional(product.getConditional());
         productOnRepo.setPermalink(product.getPermalink());
         productOnRepo.setSellerAddress(product.getSellerAddress());
         productOnRepo.setSellerContact(product.getSellerContact());

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,8 @@ public class Attribute {
     @lombok.Getter(onMethod_ = {@JsonProperty("id")})
     @lombok.Setter(onMethod_ = {@JsonProperty("id")})
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator= "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     @lombok.Getter(onMethod_ = {@JsonProperty("value_name")})
     @lombok.Setter(onMethod_ = {@JsonProperty("value_name")})

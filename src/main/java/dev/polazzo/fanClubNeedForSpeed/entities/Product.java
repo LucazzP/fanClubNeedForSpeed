@@ -5,12 +5,10 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.Hibernate;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,7 +21,8 @@ public class Product {
     @lombok.Getter(onMethod_ = {@JsonProperty("id")})
     @lombok.Setter(onMethod_ = {@JsonProperty("id")})
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator= "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     @lombok.Getter(onMethod_ = {@JsonProperty("site_id")})
     @lombok.Setter(onMethod_ = {@JsonProperty("site_id")})
@@ -66,7 +65,7 @@ public class Product {
     private OffsetDateTime stopTime;
     @lombok.Getter(onMethod_ = {@JsonProperty("condition")})
     @lombok.Setter(onMethod_ = {@JsonProperty("condition")})
-    private String condition;
+    private String conditional;
     @lombok.Getter(onMethod_ = {@JsonProperty("permalink")})
     @lombok.Setter(onMethod_ = {@JsonProperty("permalink")})
     private String permalink;
@@ -88,12 +87,12 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Objects.equals(id, product.id) && Objects.equals(siteId, product.siteId) && Objects.equals(title, product.title) && Objects.equals(idIntegracao, product.idIntegracao) && Objects.equals(subtitle, product.subtitle) && Objects.equals(sellerId, product.sellerId) && Objects.equals(price, product.price) && Objects.equals(basePrice, product.basePrice) && Objects.equals(originalPrice, product.originalPrice) && Objects.equals(currencyId, product.currencyId) && Objects.equals(initialQuantity, product.initialQuantity) && Objects.equals(availableQuantity, product.availableQuantity) && Objects.equals(startTime, product.startTime) && Objects.equals(stopTime, product.stopTime) && Objects.equals(condition, product.condition) && Objects.equals(permalink, product.permalink) && Objects.equals(sellerAddress, product.sellerAddress) && Objects.equals(sellerContact, product.sellerContact) && attributes.equals(product.attributes);
+        return Objects.equals(id, product.id) && Objects.equals(siteId, product.siteId) && Objects.equals(title, product.title) && Objects.equals(idIntegracao, product.idIntegracao) && Objects.equals(subtitle, product.subtitle) && Objects.equals(sellerId, product.sellerId) && Objects.equals(price, product.price) && Objects.equals(basePrice, product.basePrice) && Objects.equals(originalPrice, product.originalPrice) && Objects.equals(currencyId, product.currencyId) && Objects.equals(initialQuantity, product.initialQuantity) && Objects.equals(availableQuantity, product.availableQuantity) && Objects.equals(startTime, product.startTime) && Objects.equals(stopTime, product.stopTime) && Objects.equals(conditional, product.conditional) && Objects.equals(permalink, product.permalink) && Objects.equals(sellerAddress, product.sellerAddress) && Objects.equals(sellerContact, product.sellerContact) && attributes.equals(product.attributes);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(id, siteId, title, idIntegracao, subtitle, sellerId, price, basePrice, originalPrice, currencyId, initialQuantity, availableQuantity, startTime, stopTime, condition, permalink, sellerAddress, sellerContact);
+        int result = Objects.hash(id, siteId, title, idIntegracao, subtitle, sellerId, price, basePrice, originalPrice, currencyId, initialQuantity, availableQuantity, startTime, stopTime, conditional, permalink, sellerAddress, sellerContact);
         result = 31 * result + attributes.hashCode();
         return result;
     }
