@@ -15,21 +15,25 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 public class SellerAddress {
-    @lombok.Getter(onMethod_ = {@JsonProperty("id")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("id")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @lombok.Getter(onMethod_ = {@JsonProperty("city")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("city")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("city")
     @ManyToOne
     private City city;
-    @lombok.Getter(onMethod_ = {@JsonProperty("state")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("state")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("state")
     @ManyToOne
     private State state;
-    @lombok.Getter(onMethod_ = {@JsonProperty("country")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("country")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("country")
     @ManyToOne
     private Country country;
 

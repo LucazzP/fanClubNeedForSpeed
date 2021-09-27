@@ -18,13 +18,15 @@ import javax.persistence.Id;
 @ToString
 @RequiredArgsConstructor
 public class State {
-    @Getter(onMethod_ = {@JsonProperty("id")})
-    @Setter(onMethod_ = {@JsonProperty("id")})
+    @Getter
+    @Setter
+    @JsonProperty("id")
     @Id
     @GeneratedValue(generator= "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @Getter(onMethod_ = {@JsonProperty("name")})
-    @Setter(onMethod_ = {@JsonProperty("name")})
+    @Getter
+    @Setter
+    @JsonProperty("name")
     private String name;
 }

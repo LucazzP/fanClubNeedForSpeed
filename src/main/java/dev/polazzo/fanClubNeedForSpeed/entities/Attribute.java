@@ -18,13 +18,15 @@ import javax.persistence.Id;
 @ToString
 @RequiredArgsConstructor
 public class Attribute {
-    @lombok.Getter(onMethod_ = {@JsonProperty("id")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("id")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("id")
     @Id
     @GeneratedValue(generator= "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @lombok.Getter(onMethod_ = {@JsonProperty("value_name")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("value_name")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("value_name")
     private String valueName;
 }

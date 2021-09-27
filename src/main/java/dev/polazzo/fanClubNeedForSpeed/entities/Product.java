@@ -18,66 +18,85 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 public class Product {
-    @lombok.Getter(onMethod_ = {@JsonProperty("id")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("id")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("id")
     @Id
-    @GeneratedValue(generator= "uuid")
+    @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @lombok.Getter(onMethod_ = {@JsonProperty("site_id")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("site_id")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("site_id")
     private String siteId;
-    @lombok.Getter(onMethod_ = {@JsonProperty("title")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("title")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("title")
     private String title;
-    @lombok.Getter(onMethod_ = {@JsonProperty("id_integracao")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("id_integracao")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("id_integracao")
     private Long idIntegracao;
-    @lombok.Getter(onMethod_ = {@JsonProperty("subtitle")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("subtitle")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("subtitle")
     private String subtitle;
-    @lombok.Getter(onMethod_ = {@JsonProperty("seller_id")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("seller_id")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("seller_id")
     private Long sellerId;
-    @lombok.Getter(onMethod_ = {@JsonProperty("price")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("price")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("price")
     private Integer price;
-    @lombok.Getter(onMethod_ = {@JsonProperty("base_price")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("base_price")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("base_price")
     private Integer basePrice;
-    @lombok.Getter(onMethod_ = {@JsonProperty("original_price")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("original_price")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("original_price")
     private Integer originalPrice;
-    @lombok.Getter(onMethod_ = {@JsonProperty("currency_id")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("currency_id")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("currency_id")
     private String currencyId;
-    @lombok.Getter(onMethod_ = {@JsonProperty("initial_quantity")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("initial_quantity")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("initial_quantity")
     private Long initialQuantity;
-    @lombok.Getter(onMethod_ = {@JsonProperty("available_quantity")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("available_quantity")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("available_quantity")
     private Long availableQuantity;
-    @lombok.Getter(onMethod_ = {@JsonProperty("start_time")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("start_time")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("start_time")
     private OffsetDateTime startTime;
-    @lombok.Getter(onMethod_ = {@JsonProperty("stop_time")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("stop_time")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("stop_time")
     private OffsetDateTime stopTime;
-    @lombok.Getter(onMethod_ = {@JsonProperty("condition")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("condition")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("condition")
     private String conditional;
-    @lombok.Getter(onMethod_ = {@JsonProperty("permalink")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("permalink")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("permalink")
     private String permalink;
-    @lombok.Getter(onMethod_ = {@JsonProperty("seller_address")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("seller_address")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("seller_address")
     @ManyToOne
     private SellerAddress sellerAddress;
-    @lombok.Getter(onMethod_ = {@JsonProperty("seller_contact")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("seller_contact")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("seller_contact")
     private String sellerContact;
-    @Getter(onMethod_ = {@JsonProperty("attributes")})
-    @Setter(onMethod_ = {@JsonProperty("attributes")})
+    @Getter
+    @Setter
+    @JsonProperty("attributes")
     @ManyToMany
     @ToString.Exclude
     private List<Attribute> attributes;

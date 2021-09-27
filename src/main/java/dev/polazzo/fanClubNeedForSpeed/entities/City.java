@@ -18,13 +18,15 @@ import javax.persistence.Id;
 @ToString
 @RequiredArgsConstructor
 public class City {
-    @lombok.Getter(onMethod_ = {@JsonProperty("id")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("id")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("id")
     @Id
     @GeneratedValue(generator= "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @lombok.Getter(onMethod_ = {@JsonProperty("name")})
-    @lombok.Setter(onMethod_ = {@JsonProperty("name")})
+    @lombok.Getter
+    @lombok.Setter
+    @JsonProperty("name")
     private String name;
 }
