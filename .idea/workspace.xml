@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7e2d4e4-27a2-4009-b2d9-29a7d035a8cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/controllers/CityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/controllers/CountryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/repositories/AttributeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/repositories/CityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/repositories/CountryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/repositories/StateRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fan_club_need_for_speed.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fan_club_need_for_speed.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Attribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/polazzo/fanClubNeedForSpeed/entities/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +80,8 @@
       <recent name="C:\dev\projects\spring_boot\fan_club_need_for_speed\src\main\java\dev\polazzo\fanClubNeedForSpeed\entities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dev.polazzo.fanClubNeedForSpeed.controllers" />
+      <recent name="dev.polazzo.fanClubNeedForSpeed.repositories" />
       <recent name="dev.polazzo.fanClubNeedForSpeed.entities" />
     </key>
   </component>
@@ -105,7 +105,7 @@
       <workItem from="1632439440135" duration="4167000" />
       <workItem from="1632444094209" duration="5386000" />
       <workItem from="1632696544549" duration="514000" />
-      <workItem from="1632697089319" duration="4040000" />
+      <workItem from="1632697089319" duration="5616000" />
     </task>
     <servers />
   </component>
