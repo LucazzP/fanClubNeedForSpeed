@@ -1,6 +1,7 @@
 package dev.polazzo.fanClubNeedForSpeed.controllers;
 
 import dev.polazzo.fanClubNeedForSpeed.entities.Product;
+import dev.polazzo.fanClubNeedForSpeed.repositories.AttributeRepository;
 import dev.polazzo.fanClubNeedForSpeed.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,10 +13,12 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     private final ProductRepository repository;
+    private final AttributeRepository repositoryAttribute;
 
     @Autowired
-    public ProductController(ProductRepository repository) {
+    public ProductController(ProductRepository repository, AttributeRepository repositoryAttribute) {
         this.repository = repository;
+        this.repositoryAttribute = repositoryAttribute;
     }
 
     @GetMapping("/{id}")
@@ -30,6 +33,9 @@ public class ProductController {
 
     @PostMapping
     Product add(@RequestBody Product product) {
+        if(product.getAttributes() != null && product.getAttributes().size() > 0) {
+            repositoryAttribute.saveAll(product.getAttributes());
+        }
         return repository.save(product);
     }
 
