@@ -19,7 +19,7 @@ public class SellerAddressController {
     }
 
     @GetMapping("/{id}")
-    SellerAddress getOne(@PathVariable("id") String id) {
+    SellerAddress getOne(@PathVariable("id") Long id) {
         return repository.getById(id);
     }
 
@@ -37,13 +37,15 @@ public class SellerAddressController {
     SellerAddress update(@RequestBody SellerAddress sellerAddress) {
         final SellerAddress sellerAddressOnRepo = repository.getById(sellerAddress.getId());
         
-        sellerAddressOnRepo.setName(sellerAddress.getName());
+        sellerAddressOnRepo.setCity(sellerAddress.getCity());
+        sellerAddressOnRepo.setState(sellerAddress.getState());
+        sellerAddressOnRepo.setCountry(sellerAddress.getCountry());
 
         return repository.save(sellerAddressOnRepo);
     }
 
     @DeleteMapping("/{id}")
-    ResponseEntity<Void> delete(@PathVariable("id") String id) {
+    ResponseEntity<Void> delete(@PathVariable("id") Long id) {
         repository.deleteById(id);
         return ResponseEntity.ok().build();
     }
