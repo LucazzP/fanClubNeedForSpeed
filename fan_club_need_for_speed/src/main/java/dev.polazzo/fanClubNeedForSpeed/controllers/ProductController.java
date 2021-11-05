@@ -23,7 +23,7 @@ public class ProductController {
 
     @GetMapping("/{id}")
     Product getOne(@PathVariable("id") String id) {
-        return repository.getById(id);
+        return repository.getOne(id);
     }
 
     @GetMapping
@@ -41,7 +41,7 @@ public class ProductController {
 
     @PutMapping
     Product update(@RequestBody Product product) {
-        final Product productOnRepo = repository.getById(product.getId());
+        final Product productOnRepo = repository.getOne(product.getId());
 
         productOnRepo.setTitle(product.getTitle());
         productOnRepo.setIdIntegracao(product.getIdIntegracao());

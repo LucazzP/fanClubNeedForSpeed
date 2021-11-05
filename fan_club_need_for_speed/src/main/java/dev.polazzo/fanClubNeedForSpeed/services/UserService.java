@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService implements CrudInterface<User> {
+public class UserService implements CrudInterface<User, Long> {
     final private UserRepository userRepository;
 
     @Autowired
@@ -23,12 +23,12 @@ public class UserService implements CrudInterface<User> {
     }
 
     @Override
-    public Optional<User> save(User entity) {
-        return Optional.of(userRepository.save(entity));
+    public User save(User entity) {
+        return userRepository.save(entity);
     }
 
     @Override
-    public Optional<User> findById(long id) {
+    public Optional<User> findById(Long id) {
         return userRepository.findById(id);
     }
 
@@ -38,7 +38,7 @@ public class UserService implements CrudInterface<User> {
     }
 
     @Override
-    public void deleteById(long id) {
+    public void deleteById(Long id) {
         userRepository.deleteById(id);
     }
 

@@ -20,7 +20,7 @@ public class CityController {
 
     @GetMapping("/{id}")
     City getOne(@PathVariable("id") String id) {
-        return repository.getById(id);
+        return repository.getOne(id);
     }
 
     @GetMapping
@@ -35,7 +35,7 @@ public class CityController {
 
     @PutMapping
     City update(@RequestBody City city) {
-        final City cityOnRepo = repository.getById(city.getId());
+        final City cityOnRepo = repository.getOne(city.getId());
 
         cityOnRepo.setName(city.getName());
 

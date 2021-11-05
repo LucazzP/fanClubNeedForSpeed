@@ -20,7 +20,7 @@ public class CountryController {
 
     @GetMapping("/{id}")
     Country getOne(@PathVariable("id") String id) {
-        return repository.getById(id);
+        return repository.getOne(id);
     }
 
     @GetMapping
@@ -35,7 +35,7 @@ public class CountryController {
 
     @PutMapping
     Country update(@RequestBody Country country) {
-        final Country countryOnRepo = repository.getById(country.getId());
+        final Country countryOnRepo = repository.getOne(country.getId());
 
         countryOnRepo.setName(country.getName());
 

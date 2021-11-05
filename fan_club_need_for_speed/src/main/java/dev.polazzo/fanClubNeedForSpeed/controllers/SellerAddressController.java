@@ -20,7 +20,7 @@ public class SellerAddressController {
 
     @GetMapping("/{id}")
     SellerAddress getOne(@PathVariable("id") Long id) {
-        return repository.getById(id);
+        return repository.getOne(id);
     }
 
     @GetMapping
@@ -35,7 +35,7 @@ public class SellerAddressController {
 
     @PutMapping
     SellerAddress update(@RequestBody SellerAddress sellerAddress) {
-        final SellerAddress sellerAddressOnRepo = repository.getById(sellerAddress.getId());
+        final SellerAddress sellerAddressOnRepo = repository.getOne(sellerAddress.getId());
         
         sellerAddressOnRepo.setCity(sellerAddress.getCity());
         sellerAddressOnRepo.setState(sellerAddress.getState());

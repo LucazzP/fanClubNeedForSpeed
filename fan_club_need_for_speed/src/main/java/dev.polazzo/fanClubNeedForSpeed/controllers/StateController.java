@@ -20,7 +20,7 @@ public class StateController {
 
     @GetMapping("/{id}")
     State getOne(@PathVariable("id") String id) {
-        return repository.getById(id);
+        return repository.getOne(id);
     }
 
     @GetMapping
@@ -35,7 +35,7 @@ public class StateController {
 
     @PutMapping
     State update(@RequestBody State state) {
-        final State stateOnRepo = repository.getById(state.getId());
+        final State stateOnRepo = repository.getOne(state.getId());
 
         stateOnRepo.setName(state.getName());
 

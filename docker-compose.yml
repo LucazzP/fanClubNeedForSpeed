@@ -1,0 +1,40 @@
+version: '3.3'
+
+services:
+
+  #############################################################
+  ######################### SERVICE ###########################
+  #############################################################
+
+  mysql:
+    image: 'mysql/mysql-server'
+    networks:
+      - fuji-network
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'fcnfs'
+
+  brasil-service:
+    image: 'lucazz18/fan-club-need-for-speed-service:latest'
+    networks:
+      - fuji-network
+    ports:
+      - "8089:8089"
+    depends_on:
+      - mysql
+#      - eureka-service
+    environment:
+      EUREKA_URL: fanClubNeedForSpeed-service
+      EUREKA_DEFAULT_ZONE: 'http://eureka-service:8761/eureka'
+
+
+#############################################################
+######################### NETWORK ###########################
+#############################################################
+networks:
+  fuji-network:
+    driver: "bridge"
