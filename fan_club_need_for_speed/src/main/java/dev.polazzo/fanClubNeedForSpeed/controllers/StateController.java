@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/state")
+@RequestMapping("/api/state")
 public class StateController {
     private final StateRepository repository;
 

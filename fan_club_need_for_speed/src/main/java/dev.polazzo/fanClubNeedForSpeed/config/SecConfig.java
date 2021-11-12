@@ -11,9 +11,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecConfig extends WebSecurityConfigurerAdapter {
-
-
-
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf()
                 .disable()

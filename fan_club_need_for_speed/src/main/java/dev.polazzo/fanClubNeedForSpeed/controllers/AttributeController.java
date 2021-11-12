@@ -3,6 +3,7 @@ package dev.polazzo.fanClubNeedForSpeed.controllers;
 import dev.polazzo.fanClubNeedForSpeed.entities.Attribute;
 import dev.polazzo.fanClubNeedForSpeed.repositories.AttributeRepository;
 import dev.polazzo.fanClubNeedForSpeed.services.AttributeService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/attribute")
+@RequestMapping("/api/attribute")
 public class AttributeController {
     private final AttributeService service;
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/city")
+@RequestMapping("/api/city")
 public class CityController {
     private final CityRepository repository;
 

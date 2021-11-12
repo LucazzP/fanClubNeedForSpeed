@@ -1,4 +1,4 @@
-package br.puc.servicoseguro.resource;
+package dev.polazzo.fanClubNeedForSpeed.controllers;
 
 import dev.polazzo.fanClubNeedForSpeed.entities.User;
 import dev.polazzo.fanClubNeedForSpeed.services.UserService;
@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/user")
 public class UserController {
     final private UserService userService;
 
@@ -19,12 +19,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/user")
+    @GetMapping()
     public List<User> getUsers() {
         return userService.findAll();
     }
 
-    @PostMapping("/user")
+    @PostMapping()
     public ResponseEntity<User>
     save(@Valid @RequestBody User user) {
         userService.save(user);
@@ -32,20 +32,20 @@ public class UserController {
     }
 
 
-    @PutMapping("/user")
+    @PutMapping()
     public ResponseEntity update(@Valid @RequestBody User user) {
         userService.save(user);
         return ResponseEntity.ok().body(user);
     }
 
 
-    @DeleteMapping("/user")
+    @DeleteMapping()
     public ResponseEntity<String> delete(@Valid @RequestBody User user) {
         userService.delete(user);
        return  ResponseEntity.ok().body("User excluded ID: " + user.getId());
     }
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteById(@PathVariable Long id) {
         userService.deleteById(id);
         return ResponseEntity.ok().body("User excluded ID: " + id);
