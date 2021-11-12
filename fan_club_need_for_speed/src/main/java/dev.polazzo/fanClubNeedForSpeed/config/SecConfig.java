@@ -32,7 +32,7 @@ public class SecConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // cria uma conta default
+        // cria uma conta  default
 
         auth.inMemoryAuthentication()
                 .withUser("progweb")
