@@ -6,12 +6,34 @@ services:
   ######################### SERVICE ###########################
   #############################################################
 
-  fan-club-need-for-speed:
-    image: 'lucazz18/fan-club-need-for-speed-service:latest'
+  eureka-service:
+    image: 'lucazz18/eureka-service:latest'
+    networks:
+      - fuji-network
+    ports:
+      - "8761:8761"
+
+  gateway-service:
+    image: 'lucazz18/gateway-service:latest'
+    networks:
+      - fuji-network
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-service
+    environment:
+      EUREKA_URL: gateway-service
+      EUREKA_DEFAULT_ZONE: 'http://eureka-service:8761/eureka'
+
+#  fan-club-need-for-speed-service:
+#    image: 'lucazz18/fan-club-need-for-speed-service:latest'
 #    networks:
 #      - fuji-network
-    ports:
-      - "8089:8089"
+#    ports:
+#      - "8089:8089"
+#    depends_on:
+#      - mysql
+#      - eureka-service
 #    environment:
 #      EUREKA_URL: fan-club-need-for-speed-service
 #      EUREKA_DEFAULT_ZONE: 'http://eureka-service:8761/eureka'
