@@ -50,6 +50,8 @@
 
     <modules>
         <module>fan_club_need_for_speed</module>
+        <module>eureka</module>
+        <module>gateway</module>
     </modules>
 
 </project>
