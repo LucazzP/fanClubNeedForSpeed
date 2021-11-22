@@ -1,4 +1,4 @@
-FROM maven:3.8-jdk-11-slim AS MAVEN_BUILD
+FROM maven:3.6.3-jdk-11-slim AS MAVEN_BUILD
 WORKDIR /build
 COPY pom.xml .
 RUN mvn dependency:go-offline
@@ -8,5 +8,6 @@ RUN mvn package -Dmaven.test.skip=true
 COPY target/ /build/target/
 
 FROM openjdk:11
+EXPOSE 8089
 COPY --from=MAVEN_BUILD /build/target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]

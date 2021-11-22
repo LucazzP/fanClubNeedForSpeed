@@ -11,6 +11,4 @@ public class GatewayAppConfig {
     public static void main(String[] args) {
         SpringApplication.run(GatewayAppConfig.class, args);
     }
-
-
 }

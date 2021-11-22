@@ -3,7 +3,7 @@ eureka:
     hostname: ${EUREKA_URL:localhost}
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:8761}
+      defaultZone: ${EUREKA_DEFAULT_ZONE:http://localhost:8761/eureka}
 server:
   port: 8080
 spring:
@@ -12,10 +12,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: fan-club-need-for-speed
-          uri: lb://fanclubneedforspeed
+        - id: fanclubneedforspeed
+          uri: lb://FAN-CLUB-NEED-FOR-SPEED-SERVICE
           predicates:
-            - Path=/fanclubneedforspeed/**
+            - Path=/api/**
+            - Path=/swagger-ui.html
 
 management:
   endpoints:
